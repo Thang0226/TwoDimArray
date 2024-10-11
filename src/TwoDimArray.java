@@ -6,10 +6,13 @@ public class TwoDimArray {
 		int rows;
 		int cols;
 		System.out.println("-----Find maximum value in a matrix-----");
-		System.out.print("Enter number of rows: ");
-		rows = input.nextInt();
-		System.out.print("Enter number of columns: ");
-		cols = input.nextInt();
+		do {
+			System.out.print("Enter number of rows: ");
+			rows = input.nextInt();
+			System.out.print("Enter number of columns: ");
+			cols = input.nextInt();
+		} while (rows <= 0 || cols <= 0);
+
 
 		int[][] mat = new int[rows][cols];
 		inputMatrix(mat);
